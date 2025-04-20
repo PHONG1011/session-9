@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Clubweb</title>
+  <style>
+    * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: Arial, sans-serif;
+  background-color: #111;
+  color: white;
+  line-height: 1.6;
+}
+a {
+  color: white;
+  text-decoration: none;
+}
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  background-color: #1a1a1a;
+}
+.navbar nav a {
+  margin-right: 15px;
+}
+.btn-primary {
+  background: #3b82f6;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+.btn-outline {
+  background: transparent;
+  color: white;
+  border: 1px solid white;
+  padding: 10px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+.hero {
+  text-align: center;
+  padding: 60px 20px;
+}
+.hero .highlight {
+  color: #3b82f6;
+}
+.hero-img {
+  width: 100%;
+  max-width: 600px;
+  margin: 30px auto;
+  display: block;
+}
+.services {
+  text-align: center;
+  padding: 60px 20px;
+}
+.cards {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin: 30px 0;
+}
+.card {
+  padding: 40px;
+  border-radius: 12px;
+  color: white;
+  font-weight: bold;
+}
+.orange { background: orange; }
+.purple { background: purple; }
+.blue { background: #3b82f6; }
+.tools span {
+  margin: 0 10px;
+}
+.developers .grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+.dev-card {
+  background: #222;
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+}
+.testimonials {
+  padding: 60px 20px;
+  background: #1a1a1a;
+}
+.testimonial-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 20px;
+}
+.testimonial {
+  background: #222;
+  padding: 20px;
+  border-radius: 8px;
+}
+.cta {
+  display: flex;
+  align-items: center;
+  padding: 60px 20px;
+}
+.cta-img {
+  width: 50%;
+  border-radius: 10px;
+}
+.join {
+  text-align: center;
+  background: #3b82f6;
+  color: white;
+  padding: 60px 20px;
+}
+.footer {
+  text-align: center;
+  padding: 20px;
+  background: #111;
+}
+  </style>
+</head>
+<body>
+  <header class="navbar">
+    <div class="logo">Clubweb</div>
+    <nav>
+      <a href="#">Feature</a>
+      <a href="#">Pricing</a>
+      <a href="#">Learn</a>
+      <button class="btn-outline">Join Clubwebbers</button>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h1>Get a customized <span class="highlight">website</span> for your business and brand.</h1>
+    <p>You need a brand new. You need a website. Get someone to create. Relax and Chill</p>
+    <div class="buttons">
+      <button class="btn-primary">Get started</button>
+      <button class="btn-outline">See featured work</button>
+    </div>
+    <img src="your-image.jpg" alt="Hero Image" class="hero-img">
+  </section>
+
+  <section class="services">
+    <h2>Let us build a website with your ideas</h2>
+    <p>Get website developers to create your marketing website and portfolio faster</p>
+    <div class="cards">
+      <div class="card orange">E-commerce website</div>
+      <div class="card purple">Portfolio website</div>
+      <div class="card blue">Marketing website</div>
+    </div>
+    <h3>Choose any tool of your choice</h3>
+    <div class="tools">
+      <span>Webflow</span>
+      <span>Bubble</span>
+      <span>Vite</span>
+      <span>Vue</span>
+      <span>React</span>
+      <span>JS</span>
+    </div>
+  </section>
+
+  <section class="developers">
+    <h2>Featured Developers</h2>
+    <p>Use our featured developers for your web projects</p>
+    <div class="grid">
+      <!-- Replace with real images if needed -->
+      <div class="dev-card">Dev 1</div>
+      <div class="dev-card">Dev 2</div>
+      <div class="dev-card">Dev 3</div>
+      <div class="dev-card">Dev 4</div>
+      <div class="dev-card">Dev 5</div>
+      <div class="dev-card">Dev 6</div>
+    </div>
+  </section>
+
+  <section class="testimonials">
+    <h2>Message from users</h2>
+    <div class="testimonial-grid">
+      <div class="testimonial">"Feedback 1"</div>
+      <div class="testimonial">"Feedback 2"</div>
+      <div class="testimonial">"Feedback 3"</div>
+      <div class="testimonial">"Feedback 4"</div>
+      <div class="testimonial">"Feedback 5"</div>
+      <div class="testimonial">"Feedback 6"</div>
+    </div>
+  </section>
+
+  <section class="cta">
+    <img src="cta-image.jpg" alt="CTA Image" class="cta-img">
+    <div class="cta-text">
+      <h2>Enjoy Life<br>Your website is ready</h2>
+    </div>
+  </section>
+
+  <section class="join">
+    <h2>Do you want to be a clubweber?</h2>
+    <p>Be part of an exciting community of website developers</p>
+    <button class="btn-primary">Join Clubweb</button>
+  </section>
+
+  <footer class="footer">
+    <p>Privacy policy</p>
+    <div class="social-icons">[icons]</div>
+    <p>© Clubweb</p>
+  </footer>
+</body>
+</html>
+
