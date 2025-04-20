@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Words Learner Platform</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        :root {
+    --primary-color: #2DD3C5;
+    --orange: #FFB74D;
+    --pink: #FF7B9C;
+    --purple: #B69CFF;
+    --text-color: #333333;
+    --light-bg: #F5FFFE;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+}
+
+/* Navigation */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 5%;
+    background: white;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--text-color);
+    margin: 0 1rem;
+}
+
+.auth-buttons button {
+    padding: 0.5rem 1.5rem;
+    margin-left: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn-sign-in {
+    background: none;
+    border: 1px solid var(--text-color);
+}
+
+.btn-sign-up {
+    background: var(--primary-color);
+    border: none;
+    color: white;
+}
+
+/* Hero Section */
+.hero {
+    background: var(--light-bg);
+    padding: 5rem 5%;
+}
+
+.hero-content {
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+}
+
+.hero-text h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.btn-primary {
+    background: var(--primary-color);
+    color: white;
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Features Section */
+.features {
+    padding: 5rem 5%;
+    text-align: center;
+}
+
+.feature-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.feature-card {
+    padding: 2rem;
+    border-radius: 10px;
+    background: white;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1rem;
+}
+
+.icon.orange { background: var(--orange); }
+.icon.pink { background: var(--pink); }
+.icon.purple { background: var(--purple); }
+
+/* Courses Section */
+.courses {
+    padding: 5rem 5%;
+}
+
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.course-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.course-card {
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.course-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+/* Stats Section */
+.stats {
+    display: flex;
+    justify-content: space-around;
+    padding: 5rem 5%;
+    background: white;
+}
+
+.stat-item {
+    text-align: center;
+}
+
+.stat-item h3 {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+}
+
+/* Testimonials Section */
+.testimonials {
+    padding: 5rem 5%;
+    text-align: center;
+    position: relative;
+}
+
+.testimonial-avatars {
+    position: relative;
+    height: 200px;
+    margin-top: 2rem;
+}
+
+/* CTA Section */
+.cta {
+    background: var(--light-bg);
+    padding: 4rem 5%;
+    text-align: center;
+}
+
+/* Footer */
+footer {
+    background: white;
+    padding: 4rem 5%;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    gap: 4rem;
+}
+
+.footer-links {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+}
+
+.link-group h4 {
+    margin-bottom: 1rem;
+}
+
+.link-group a {
+    display: block;
+    color: var(--text-color);
+    text-decoration: none;
+    margin-bottom: 0.5rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero-content,
+    .feature-cards,
+    .course-cards,
+    .footer-content,
+    .footer-links {
+        grid-template-columns: 1fr;
+    }
+
+    .nav-links {
+        display: none;
+    }
+
+    .hero-text h1 {
+        font-size: 2.5rem;
+    }
+}
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="logo.png" alt="Words Learner">
+            </div>
+            <div class="nav-links">
+                <a href="#">Home</a>
+                <a href="#">Features</a>
+                <a href="#">Pricing</a>
+                <a href="#">About</a>
+                <a href="#">Contact</a>
+            </div>
+            <div class="auth-buttons">
+                <button class="btn-sign-in">Sign in</button>
+                <button class="btn-sign-up">Sign up</button>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1>Words learner come here.</h1>
+                    <p>Get ready to enhance your vocabulary and improve your language skills.</p>
+                    <button class="btn-primary">Get Started</button>
+                </div>
+                <div class="hero-image">
+                    <img src="hero-image.png" alt="Teacher">
+                </div>
+            </div>
+        </section>
+
+        <section class="features">
+            <h2>We are providing suitable features for students.</h2>
+            <p>Everything you need to learn and improve your skills</p>
+            
+            <div class="feature-cards">
+                <div class="feature-card">
+                    <div class="icon orange">
+                        <img src="icon1.png" alt="Live Class">
+                    </div>
+                    <h3>Live Class</h3>
+                    <p>Interactive live sessions with expert instructors</p>
+                </div>
+                <div class="feature-card">
+                    <div class="icon pink">
+                        <img src="icon2.png" alt="Records">
+                    </div>
+                    <h3>Records</h3>
+                    <p>Access recorded sessions anytime</p>
+                </div>
+                <div class="feature-card">
+                    <div class="icon purple">
+                        <img src="icon3.png" alt="Tasks">
+                    </div>
+                    <h3>Tasks</h3>
+                    <p>Practice exercises and assignments</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="courses">
+            <div class="section-header">
+                <h2>Popular Courses</h2>
+                <a href="#" class="view-all">View All Courses</a>
+            </div>
+            <div class="course-cards">
+                <div class="course-card">
+                    <img src="course1.jpg" alt="Web Design">
+                    <h3>Web Design</h3>
+                    <p>Learn the basics of web design</p>
+                    <div class="price">$100</div>
+                </div>
+                <div class="course-card">
+                    <img src="course2.jpg" alt="Web Development">
+                    <h3>Web Development</h3>
+                    <p>Master web development skills</p>
+                    <div class="price">$150</div>
+                </div>
+                <div class="course-card">
+                    <img src="course3.jpg" alt="UI/UX Design">
+                    <h3>UI/UX Design</h3>
+                    <p>Create amazing user experiences</p>
+                    <div class="price">$120</div>
+                </div>
+            </div>
+        </section>
+
+        <section class="stats">
+            <div class="stat-item">
+                <h3>100+</h3>
+                <p>Regular Events</p>
+            </div>
+            <div class="stat-item">
+                <h3>500+</h3>
+                <p>Active Users</p>
+            </div>
+            <div class="stat-item">
+                <h3>1M+</h3>
+                <p>Student learning</p>
+            </div>
+        </section>
+
+        <section class="testimonials">
+            <div class="testimonial-content">
+                <blockquote>
+                    "They are the best people. And this is the suitable platform to learn from distance."
+                </blockquote>
+                <div class="testimonial-avatars">
+                    <!-- Avatar circles will be positioned absolutely -->
+                </div>
+            </div>
+        </section>
+
+        <section class="cta">
+            <h2>Ready to Get Admit</h2>
+            <button class="btn-primary">Get Started</button>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <img src="logo.png" alt="Words Learner">
+            </div>
+            <div class="footer-links">
+                <div class="link-group">
+                    <h4>Company</h4>
+                    <a href="#">About</a>
+                    <a href="#">Features</a>
+                    <a href="#">Works</a>
+                    <a href="#">Career</a>
+                </div>
+                <div class="link-group">
+                    <h4>Community</h4>
+                    <a href="#">Help Desk</a>
+                    <a href="#">Blog</a>
+                    <a href="#">Resources</a>
+                </div>
+                <div class="link-group">
+                    <h4>Teaching</h4>
+                    <a href="#">Become a teacher</a>
+                    <a href="#">Teaching academy</a>
+                </div>
+                <div class="link-group">
+                    <h4>Be social</h4>
+                    <div class="social-links">
+                        <!-- Social media links -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
