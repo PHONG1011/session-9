@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fashion Store</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+}
+
+/* Navigation */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 5%;
+    background: white;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--text-color);
+    margin: 0 1.5rem;
+}
+
+.btn-dark {
+    background: var(--dark-color);
+    color: white;
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Hero Section */
+.hero {
+    padding: 5rem 5%;
+    background: var(--light-bg);
+}
+
+.hero-content {
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+}
+
+.hero-text h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.btn-primary {
+    background: var(--primary-color);
+    color: white;
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Featured Banner */
+.featured-banner {
+    padding: 2rem 5%;
+}
+
+.banner-content {
+    background: var(--light-bg);
+    border-radius: 10px;
+    padding: 2rem;
+    display: flex;
+    align-items: center;
+}
+
+/* Product Grid */
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+    padding: 2rem 5%;
+}
+
+.product-card {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.product-card img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+/* Video Section */
+.video-content {
+    position: relative;
+    padding: 4rem 5%;
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+}
+
+.play-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    border: none;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+/* Stats Section */
+.stats {
+    display: flex;
+    justify-content: space-around;
+    padding: 4rem 5%;
+    background: var(--light-bg);
+}
+
+.stat-item {
+    text-align: center;
+}
+
+.stat-item h3 {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+}
+
+/* Pricing Cards */
+.pricing-cards {
+    display: flex;
+    gap: 2rem;
+    padding: 2rem 5%;
+    justify-content: center;
+}
+
+.pricing-card {
+    background: white;
+    border-radius: 10px;
+    padding: 2rem;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    width: 300px;
+}
+
+.pricing-card.featured {
+    border: 2px solid var(--primary-color);
+}
+
+/* Footer */
+footer {
+    background: var(--dark-color);
+    color: white;
+    padding: 4rem 5%;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 4rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero-content,
+    .product-grid,
+    .video-content,
+    .pricing-cards {
+        grid-template-columns: 1fr;
+        flex-direction: column;
+    }
+
+    .nav-links {
+        display: none;
+    }
+
+    .hero-text h1 {
+        font-size: 2.5rem;
+    }
+}
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="logo.png" alt="Store Logo">
+            </div>
+            <div class="nav-links">
+                <a href="#" class="active">Shop</a>
+                <a href="#">Men</a>
+                <a href="#">Women</a>
+                <a href="#">Pricing</a>
+            </div>
+            <div class="nav-icons">
+                <a href="#" class="cart-icon">🛒</a>
+                <button class="btn-dark">Sign In</button>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1>All Your Style Are Here</h1>
+                    <p>Discover the latest trends in fashion and explore your personal style</p>
+                    <button class="btn-primary">Shop Now</button>
+                </div>
+                <div class="hero-image">
+                    <img src="hero-product.png" alt="Featured Product">
+                    <div class="floating-elements">
+                        <!-- Decorative elements -->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="featured-banner">
+            <div class="banner-content">
+                <img src="banner-image.jpg" alt="Featured Collection">
+                <div class="banner-text">
+                    <h2>Get amazing deals on black t-shirts</h2>
+                    <span>🔥</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="best-sellers">
+            <div class="section-header">
+                <h2>Our best seller products</h2>
+                <button class="btn-outline">View All</button>
+            </div>
+            <div class="product-grid">
+                <div class="product-card">
+                    <img src="product1.jpg" alt="Black T-Shirt">
+                    <h3>Classic Black T-Shirt</h3>
+                    <p class="price">$25.00</p>
+                </div>
+                <div class="product-card">
+                    <img src="product2.jpg" alt="Pink Sweater">
+                    <h3>Comfort Pink Sweater</h3>
+                    <p class="price">$45.00</p>
+                </div>
+                <div class="product-card">
+                    <img src="product3.jpg" alt="Green Jacket">
+                    <h3>Urban Green Jacket</h3>
+                    <p class="price">$65.00</p>
+                </div>
+                <div class="product-card">
+                    <img src="product4.jpg" alt="Black Jacket">
+                    <h3>Classic Black Jacket</h3>
+                    <p class="price">$75.00</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="video-section">
+            <div class="video-content">
+                <div class="video-player">
+                    <img src="video-thumbnail.jpg" alt="Style Video">
+                    <button class="play-button">▶</button>
+                </div>
+                <div class="video-text">
+                    <h2>Looking for favorite t-shirt?</h2>
+                    <button class="btn-primary">Explore More</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="features">
+            <h2>Why Choose Us</h2>
+            <div class="feature-cards">
+                <div class="feature-card">
+                    <h3>Free Shipping</h3>
+                    <p>Free shipping on all orders</p>
+                    <button class="btn-primary">Learn More</button>
+                </div>
+                <!-- Additional feature cards -->
+            </div>
+        </section>
+
+        <section class="stats">
+            <div class="stat-item">
+                <h3>36+</h3>
+                <p>Best Seller</p>
+            </div>
+            <div class="stat-item">
+                <h3>42k+</h3>
+                <p>Active Users</p>
+            </div>
+            <div class="stat-item">
+                <h3>8k+</h3>
+                <p>Downloads</p>
+            </div>
+        </section>
+
+        <section class="trending">
+            <h2>Trending Outfit Of The Day</h2>
+            <div class="trending-grid">
+                <!-- Trending outfit cards -->
+            </div>
+        </section>
+
+        <section class="pricing">
+            <h2>Have Any Question?</h2>
+            <div class="pricing-cards">
+                <div class="pricing-card">
+                    <h3>Basic</h3>
+                    <p class="price">$14</p>
+                    <ul class="features-list">
+                        <!-- Features list -->
+                    </ul>
+                    <button class="btn-dark">Get Started</button>
+                </div>
+                <div class="pricing-card featured">
+                    <h3>Premium</h3>
+                    <p class="price">$22</p>
+                    <ul class="features-list">
+                        <!-- Features list -->
+                    </ul>
+                    <button class="btn-primary">Get Started</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-info">
+                <img src="logo.png" alt="Store Logo">
+                <p>The best look anytime, anywhere.</p>
+            </div>
+            <div class="footer-links">
+                <!-- Footer navigation -->
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
