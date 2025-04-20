@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learn - Educational Platform</title>
+    <link rel="stylesheet" href="/style.css">
+    <style>
+        :root {
+    --primary-color: #FFC107;
+    --dark-color: #1A1A1A;
+    --text-color: #333333;
+    --light-bg: #F8F9FA;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+}
+
+/* Navigation */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 5%;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--text-color);
+    margin-left: 2rem;
+}
+
+/* Buttons */
+.btn-primary {
+    background-color: var(--primary-color);
+    color: var(--dark-color);
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.btn-dark {
+    background-color: var(--dark-color);
+    color: white;
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Hero Section */
+.hero {
+    padding: 5rem 5%;
+}
+
+.hero-content {
+    display: flex;
+    gap: 4rem;
+    align-items: center;
+}
+
+.hero-text h1 {
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+}
+
+.stats {
+    display: flex;
+    gap: 3rem;
+    margin-top: 2rem;
+}
+
+/* Course Cards */
+.course-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    padding: 2rem 5%;
+}
+
+.course-card {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.course-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+/* Testimonial Section */
+.testimonial {
+    background: var(--dark-color);
+    color: white;
+    padding: 4rem 5%;
+    text-align: center;
+}
+
+/* Platform Features */
+.platform-features {
+    display: flex;
+    padding: 5rem 5%;
+    gap: 4rem;
+}
+
+.feature-images {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+}
+
+/* Blog Section */
+.blog-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    padding: 2rem 5%;
+}
+
+/* Footer */
+footer {
+    background: var(--dark-color);
+    color: white;
+    padding: 4rem 5%;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 3rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero-content {
+        flex-direction: column;
+    }
+
+    .nav-links {
+        display: none;
+    }
+
+    .platform-features {
+        flex-direction: column;
+    }
+}
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">Lesson</div>
+            <div class="nav-links">
+                <a href="#" class="active">Home</a>
+                <a href="#">Courses</a>
+                <a href="#">Pricing</a>
+                <a href="#">Resources</a>
+                <button class="btn-dark">Sign Up</button>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1>Learn without limits and spread knowledge.</h1>
+                    <p>Build new skills for that "this is my year" feeling with courses starting at $50</p>
+                    <button class="btn-primary">Start Today</button>
+                    <div class="stats">
+                        <div class="stat-item">
+                            <h3>50K+</h3>
+                            <p>Students</p>
+                        </div>
+                        <div class="stat-item">
+                            <h3>70+</h3>
+                            <p>Courses</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <img src="hero-image.jpg" alt="Student learning">
+                </div>
+            </div>
+        </section>
+
+        <section class="popular-courses">
+            <h2>Our popular courses</h2>
+            <p>Build new skills with our popular courses and level up your career</p>
+            <div class="course-grid">
+                <div class="course-card">
+                    <img src="course1.jpg" alt="Web Design">
+                    <h3>Web UX/UI Design</h3>
+                    <p>Learn the fundamentals of web design</p>
+                    <div class="price">$50.00</div>
+                    <button class="btn-primary">Enroll Now</button>
+                </div>
+                <!-- Additional course cards -->
+            </div>
+        </section>
+
+        <section class="testimonial">
+            <div class="testimonial-content">
+                <img src="avatar.jpg" alt="Ralph Jones">
+                <p>"Not only does my resume look impressive—filled with the names of top companies and positions—but these certificates also brought me closer to my career goals by allowing me to build confidence and work on real-world projects."</p>
+                <h4>Ralph Jones</h4>
+            </div>
+        </section>
+
+        <section class="platform-features">
+            <div class="feature-content">
+                <h2>Learner outcomes through our awesome platform</h2>
+                <p>Get the best learning experience and achieve your goals</p>
+                <button class="btn-primary">Join Today</button>
+            </div>
+            <div class="feature-images">
+                <img src="feature1.jpg" alt="Learning">
+                <img src="feature2.jpg" alt="Achievement">
+            </div>
+        </section>
+
+        <section class="blog">
+            <h2>Our blog</h2>
+            <p>Latest articles and resources</p>
+            <div class="blog-grid">
+                <!-- Blog cards here -->
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Lesson</h3>
+                <p>Build skills with courses, certificates, and degrees online from world-class universities and companies.</p>
+                <div class="social-links">
+                    <!-- Social media icons -->
+                </div>
+            </div>
+            <div class="footer-links">
+                <!-- Footer navigation links -->
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
